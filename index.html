@@ -5,38 +5,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
+  <div class="container">
+    
+    <header></header>
+    <main>
+      <div class="text-box-large">
+        <div class="upper-text">
+          Learn to code by<br>
+          watching others
+        </div>
+        <div class="bottom-text">
+          See how experienced developers solve problems in real-time.<br>
+          Watching scripted tutorials is great, 
+          but understanding how<br>
+          developers think is invaluable.
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="blue-button">
+        <b>Try it free 7 days</b> then $20/mo. thereafter
+      </div>
+      <div class="formulario">
+        
+        <form method="POST">
+          
+          <input type="text" id="fname" name="firstname" placeholder="Your name"><br>
 
-  Learn to code by watching others
+          
+          <input type="text" id="lname" name="lastname" placeholder="Your last name"><br>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+          
+          <input type="email" id="email" name="email" placeholder="Email Address"><br>
+          
+          <input type="password" id="password" name="password" placeholder="Password"><br>
 
-  Try it free 7 days then $20/mo. thereafter
+          <input type="submit" value="CLAIM YOUR FREE TRIAL">
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+        </form>
+        <div class="tiny-text">
+          By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+        </div>
+      </div>
+      
+    </aside>
 
-  Claim your free trial 
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/isaiasluc">Isaías Lucena</a>.
+      </p>
+    </footer>
 
-  By clicking the button, you are agreeing to our Terms and Services
+  </div>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  
+
 </body>
+<style>
+  html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url("./images/bg-intro-desktop.png");
+    font-family: 'Poppins', sans-serif;
+  }
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 95vh 5vh;
+    grid-template-areas: "left-box right-box"
+                          "footer footer";
+  }
+  main {
+    grid-area: left-box;  
+  }
+  aside {
+    grid-area: right-box;
+  }
+  footer {
+    grid-area: footer;
+  }
+  .text-box-large {
+    margin-top: 300px;
+    margin-left: 200px;
+    box-sizing: content-box;
+    color: white;
+  }
+  .upper-text {
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .bottom-text {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .blue-button {
+    margin-top: 200px;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 12px;
+    background: hsl(248, 32%, 49%);
+    border: solid 0px blue;
+    border-radius: 8px;
+    width: 420px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 3px hsl(249, 10%, 26%);
+  }
+  .formulario {
+    width: 400px;
+    height: 320px;
+    margin-top: 20px;
+    margin-left: 100px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 3px hsl(249, 10%, 26%);
+  }
+  input[type=text], [type=password], [type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+  input[type=submit] {
+    width: 100%;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input {
+  font-weight: bold;
+}
+.tiny-text {
+  font-size: 10px;
+  text-align: center;
+  color: hsl(246, 25%, 77%);
+}
+</style>
 </html>
